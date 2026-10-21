@@ -1,4 +1,6 @@
 def prime_square_sum(n: int) -> int:
+    if n < 2:
+        return 0
     sieve = bytearray([1]) * (n + 1)
     sieve[0:2] = b"\x00\x00"
     for i in range(2, int(n ** 0.5) + 1):
